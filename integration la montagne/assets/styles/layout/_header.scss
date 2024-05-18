@@ -1,0 +1,91 @@
+header {
+  min-height: 100vh;
+  position: relative;
+  font-family: 'inter', Tahoma, Geneva, Verdana, sans-serif;
+
+  .header_img{
+    @include centerflex;
+    min-height: 100vh;
+  }
+  h1 {
+      color: $white;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+      font-size: 4rem;
+      text-align: center;
+    }
+  p {
+      color: $white;
+      font-family: 'merrywheather', Tahoma, Geneva, Verdana, sans-serif;
+      opacity: 0.9; 
+      margin: 50px auto 80px;
+
+    }
+    span {
+      border: 2px solid $white;
+      border-radius: 50px;
+      height: 60px;
+      width: 60px;
+      @include centerflex;
+      a {
+        color: $white;
+      }
+    }
+
+  nav {
+    color: $white;
+    background: rgba(255, 255, 255, 0.253);
+    position: absolute; 
+    bottom: 0;
+    left: 7.5%;
+    width: 85%;
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    
+    ul {
+      display: flex;
+      align-items: center;
+    }
+    .ul_left {
+      &:hover li:not(:hover) {
+        background: none;
+        color: $white;
+      }
+      li {
+        @include title;
+        padding: 0 15px;
+        font-size: 0.7rem;
+        letter-spacing: 2px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        cursor: pointer;
+        
+        &:first-child {
+          background: $white;
+          color: $black;
+        }
+        &:hover {
+          background: $white;
+          color: $black;
+        }
+      }
+    }
+    .ul_right {
+      width: 30%;
+      display: flex;
+      justify-content: space-around;
+
+      li {
+        cursor: pointer;
+        transition: 0.5s ease-in-out;
+        font-size: 1.2rem;
+        &:hover {
+          transform: scale(1.4);
+        }
+      }
+    }
+  }
+}
