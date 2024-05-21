@@ -13,12 +13,21 @@ header {
       letter-spacing: 6px;
       font-size: 4rem;
       text-align: center;
+
+      @media screen and (max-width: 750px) {
+        font-size: 2.3rem;
+      }
     }
   p {
       color: $white;
       font-family: 'merrywheather', Tahoma, Geneva, Verdana, sans-serif;
       opacity: 0.9; 
       margin: 50px auto 80px;
+      text-align: center;
+
+      @media screen and (max-width: 950px) {
+        font-size: 0.8rem;
+      }
 
     }
     span {
@@ -42,6 +51,7 @@ header {
     height: 65px;
     display: flex;
     justify-content: space-between;
+    text-align: center;
     
     ul {
       display: flex;
@@ -77,6 +87,10 @@ header {
       width: 30%;
       display: flex;
       justify-content: space-around;
+
+      @media screen and (max-width: 720px) {
+        display: none;
+      }
 
       li {
         cursor: pointer;
