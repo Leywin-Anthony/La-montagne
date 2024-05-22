@@ -24,6 +24,24 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 
+  &::before {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $black;
+    animation: animBefore 1.5s ease forwards;
+    animation-delay: 0.15s;
+
+    @keyframes animBefore {
+      to {
+        opacity: 0;
+      }
+    }
+  }
+
   .button {
     background: none;
     font-family: 'inter';

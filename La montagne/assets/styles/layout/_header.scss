@@ -6,7 +6,17 @@ header {
   .header_img{
     @include centerflex;
     min-height: 100vh;
-  }
+    transform: translateY(60px);
+    animation: headerAnim 2s forwards ;
+
+    @keyframes headerAnim {
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+      
+    }
   h1 {
       color: $white;
       text-transform: uppercase;

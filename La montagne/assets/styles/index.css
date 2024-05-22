@@ -21,6 +21,29 @@ body {
   max-width: 1300px;
   margin: 0 auto;
 }
+body::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #15151e;
+  -webkit-animation: animBefore 1.5s ease forwards;
+          animation: animBefore 1.5s ease forwards;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+@-webkit-keyframes animBefore {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes animBefore {
+  to {
+    opacity: 0;
+  }
+}
 body .button {
   background: none;
   font-family: "inter";
@@ -70,6 +93,24 @@ header .header_img {
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 100vh;
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+  -webkit-animation: headerAnim 2s forwards;
+          animation: headerAnim 2s forwards;
+}
+@-webkit-keyframes headerAnim {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes headerAnim {
+  to {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    opacity: 1;
+  }
 }
 header h1 {
   color: #f3f3f3;
@@ -415,7 +456,7 @@ footer .infos-form textarea {
   }
 }
 footer .infos-form #message {
-  padding: 70px 40px;
+  height: 170px;
 }
 footer .infos-form input[type=text]:focus,
 footer .infos-form textarea:focus {
